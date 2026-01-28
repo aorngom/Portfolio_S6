@@ -1,0 +1,300 @@
+<!-- projets.html -->
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projets — Aminata NGOM</title>
+  <meta name="description" content="Page Projets — Portfolio Aminata NGOM (BUT Informatique AGED)." />
+
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/projets.css" />
+
+  <!-- (optionnel) si ton reveal est dans index.js -->
+  <script src="js/index.js" defer></script>
+</head>
+
+<body>
+
+  <!-- NAVBAR (comme tu as demandé : pas d'injection) -->
+  <header class="header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Aminata</span>
+      </a>
+  
+      <ul class="nav-links">
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="projets.html">Projets</a></li>
+        <li><a class="nav-link" href="competences.html">Compétences</a></li>
+        <li><a class="nav-link" href="bilan.html">Bilan</a></li>
+      </ul>
+  
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="https://github.com/aorngom" target="_blank">GitHub</a>
+        <a class="btn btn-primary" href="assets/CV_Aminata.pdf" target="_blank">CV</a>
+      </div>
+    </nav>
+  </header>
+  
+
+
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <main id="top">
+
+    <!-- HERO PROJETS -->
+<section class="projects-hero container">
+  <div class="projects-hero-left reveal">
+    <span class="pill">Projets — BUT Informatique (AGED)</span>
+
+    <h1 class="hero-title">
+      Mes <span class="accent">projets</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      Ces projets reflètent mon parcours : <b>2 ans orientés développement</b> (web, back, frameworks)
+      puis une 3e année <b>centrée data</b> (ETL, entrepôt, visualisation, moteur de recherche).
+      Chaque projet m’a permis de consolider à la fois mes compétences techniques et ma manière de travailler, que ce soit en organisation, en autonomie ou en équipe. 
+      J’accorde une grande importance au fait que la solution soit compréhensible et réellement utile pour l’utilisateur.
+    </p>
+
+    <div class="chips">
+      <span class="chip">Web</span>
+      <span class="chip">Data</span>
+      <span class="chip">ETL / DWH</span>
+      <span class="chip">API</span>
+      <span class="chip">Agile</span>
+    </div>
+
+    <div class="projects-cta">
+      <a class="btn btn-primary" href="#projets-academiques">Voir les projets</a>
+      <a class="btn btn-ghost" href="#projets-entrepreneuriaux">Projet perso</a>
+    </div>
+  </div>
+
+  <!-- OUTILS EN CERCLE -->
+  <div class="projects-hero-right reveal" aria-label="Outils clés">
+    <div class="tools-wheel card">
+      <div class="tools-wheel-center">
+        <span>DATA</span>
+      </div>
+
+      <div class="tools-wheel-ring">
+        <div class="tool-bubble tool-1" title="Python">
+          <img src="https://cdn.simpleicons.org/python" alt="Python">
+        </div>
+        <div class="tool-bubble tool-2" title="FastAPI">
+          <img src="https://cdn.simpleicons.org/fastapi" alt="FastAPI">
+        </div>
+        <div class="tool-bubble tool-3" title="PostgreSQL / SQL">
+          <img src="https://cdn.simpleicons.org/postgresql" alt="PostgreSQL">
+        </div>
+        <div class="tool-bubble tool-4" title="Vue.js">
+          <img src="https://cdn.simpleicons.org/vue.js" alt="Vue.js">
+        </div>
+        <div class="tool-bubble tool-5" title="Talend (ETL)">
+          <img src="https://cdn.simpleicons.org/apacheairflow" alt="ETL">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- PROJETS ACADEMIQUES -->
+<section id="projets-academiques" class="section container">
+  <div class="section-head reveal">
+    <h2 class="section-title">Projets académiques</h2>
+    <p class="section-desc">Clique sur “Details →” pour ouvrir la page du projet.</p>
+  </div>
+
+  <div class="projects-grid">
+
+    <!-- BUT2 - Festival de Cannes (Vue/Node) -->
+    <article class="project card reveal">
+      <div class="project-thumb">
+        <img src="assets/img/pro1.png" alt="Illustration stage" class="project-img">
+      </div> 
+            <h3 class="project-title">Festival de Cannes — site web (Vue.js / Node.js)</h3>
+      <p class="project-desc">
+        Projet web complet en équipe : pages, navigation, back-end, intégration des données et rendu “pro”.
+        Un vrai projet où j’ai appris à avancer vite avec un framework.
+      </p>
+      <div class="project-meta">
+        <span class="tag">Vue.js</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">PL/SQL</span>
+        <span class="tag">Agile</span>
+      </div>
+      <div class="project-actions">
+        <a class="link" href="projet_festival_cannes.html">Details →</a>
+      </div>
+    </article>
+
+    <!-- BUT1 - e-commerce Flask -->
+    <article class="project card reveal">
+      <div class="project-thumb">
+        <img src="assets/img/pro2.png" alt="Illustration stage" class="project-img">
+      </div>
+            <h3 class="project-title">Site e-commerce (Flask)</h3>
+      <p class="project-desc">
+        Site e-commerce avec gestion de boutique et commandes. Mon premier vrai framework :
+        j’ai compris la logique “route / template / données” et j’ai progressé en Python.
+      </p>
+      <div class="project-meta">
+        <span class="tag">Python</span>
+        <span class="tag">Flask</span>
+        <span class="tag">Web</span>
+        <span class="tag">Back-end</span>
+      </div>
+      <div class="project-actions">
+        <a class="link" href="projet_ecommerce_flask.html">Details →</a>
+      </div>
+    </article>
+
+    <!-- BUT2 - Cyber / attaques-défense -->
+    <article class="project card reveal">
+      <div class="project-thumb">
+        <img src="assets/img/pro3.png" alt="Illustration stage" class="project-img">
+      </div>
+            <h3 class="project-title">Projet cybersécurité (attaque / défense)</h3>
+      <p class="project-desc">
+        Projet en binôme : comprendre une attaque, puis renforcer/défendre le système.
+        C’est là que j’ai senti que je voulais aller vers la data / ML (très bonne note).
+      </p>
+      <div class="project-meta">
+        <span class="tag">Cybersécurité</span>
+        <span class="tag">Analyse</span>
+        <span class="tag">Méthodo</span>
+        <span class="tag">Binôme</span>
+      </div>
+      <div class="project-actions">
+        <a class="link" href="projet_cybersecurite.html">Details →</a>
+      </div>
+    </article>
+
+    <!-- BUT3 - DWH Talend -->
+    <article class="project card reveal">
+      <div class="project-thumb">
+        <img src="assets/img/pro4.png" alt="Illustration stage" class="project-img">
+      </div>
+            <h3 class="project-title">Entrepôt de données + ETL (Talend)</h3>
+      <p class="project-desc">
+        Construction d’un DWH : dimensions/faits, chargements, orchestration et contrôles.
+        Après plusieurs TP, je sais refaire un entrepôt sans “pas à pas”.
+      </p>
+      <div class="project-meta">
+        <span class="tag">Talend</span>
+        <span class="tag">SQL</span>
+        <span class="tag">DWH</span>
+        <span class="tag">ETL</span>
+      </div>
+      <div class="project-actions">
+        <a class="link" href="projet_dwh_talend.html">Details →</a>
+      </div>
+    </article>
+
+    <!-- BUT3 - Data viz Chart.js -->
+    <article class="project card reveal">
+      <div class="project-thumb">
+        <img src="assets/img/pro5.png" alt="Illustration stage" class="project-img">
+      </div>
+            <h3 class="project-title">Visualisation de données (Chart.js)</h3>
+      <p class="project-desc">
+        Transformer des données en graphiques clairs (Chart.js) avec un rendu web compréhensible.
+        Ici, le design et la lisibilité étaient aussi importants que la donnée.
+      </p>
+      <div class="project-meta">
+        <span class="tag">Chart.js</span>
+        <span class="tag">HTML/CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">DataViz</span>
+      </div>
+      <div class="project-actions">
+        <a class="link" href="projet_dataviz_chartjs.html">Details →</a>
+      </div>
+    </article>
+
+    <!-- BUT3 - Moteur de recherche séries/films -->
+    <article class="project card reveal">
+      <div class="project-thumb">
+        <img src="assets/img/pro6.png" alt="Illustration stage" class="project-img">
+      </div>
+            <h3 class="project-title">Moteur de recherche séries/films (FastAPI + Data)</h3>
+      <p class="project-desc">
+        Projet data + web : préparation des données, normalisation, TF-IDF, API FastAPI,
+        et application complète orientée utilisateur. Organisation agile → fini 5 jours en avance.
+      </p>
+      <div class="project-meta">
+        <span class="tag">FastAPI</span>
+        <span class="tag">Python</span>
+        <span class="tag">TF-IDF</span>
+        <span class="tag">Agile</span>
+      </div>
+      <div class="project-actions">
+        <a class="link" href="projet_moteur_series_films.html">Details →</a>
+      </div>
+    </article>
+
+    <!-- BUT3 - CV vidéo -->
+    <article class="project card reveal">
+      <div class="project-thumb">
+        <img src="assets/img/pro7.png" alt="Illustration stage" class="project-img">
+      </div>
+            <h3 class="project-title">CV vidéo (montage & storytelling)</h3>
+      <p class="project-desc">
+        Une expérience différente : apprendre à parler de moi, structurer un discours,
+        et produire un montage fluide avec un vrai fil conducteur.
+      </p>
+      <div class="project-meta">
+        <span class="tag">Montage</span>
+        <span class="tag">Storytelling</span>
+        <span class="tag">Communication</span>
+        <span class="tag">Créativité</span>
+      </div>
+      <div class="project-actions">
+        <a class="link" href="projet_cv_video.html">Details →</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- PROJET ENTREPRENEURIAL -->
+<section id="projets-entrepreneuriaux" class="section container">
+  <div class="section-head reveal">
+    <h2 class="section-title">Projet entrepreneurial</h2>
+    <p class="section-desc">Un projet perso que je construis en parallèle de mes études.</p>
+  </div>
+
+  <div class="projects-grid">
+    <article class="project card reveal">
+      <div class="project-thumb">
+        <img src="assets/img/jariniou.png" alt="Illustration stage" class="project-img">
+      </div>      <h3 class="project-title">Jariniou</h3>
+      <p class="project-desc">
+        Projet entrepreneurial : structuration, offre, communication et organisation.
+        Une vraie école de rigueur, de créativité et de gestion (et ça me pousse à être très régulière).
+      </p>
+      <div class="project-meta">
+        <span class="tag">Business</span>
+        <span class="tag">Organisation</span>
+        <span class="tag">Marketing</span>
+        <span class="tag">Création</span>
+      </div>
+      <div class="project-actions">
+        <a class="link" href="jariniou.html">Details →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+  
+<footer class="footer">
+  <p>© <span id="year"></span> Aminata NGOM — Portfolio</p>
+</footer>
+
+  </main>
+</body>
+</html>

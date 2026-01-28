@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Visualisation de données (Chart.js) — Aminata NGOM</title>
+  <meta name="description" content="Projet DataViz avec Chart.js — Portfolio Aminata NGOM." />
+
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/projet.css" />
+  <script src="js/projet.js" defer></script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Aminata</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="projets.html">Projets</a></li>
+        <li><a class="nav-link" href="competences.html">Compétences</a></li>
+        <li><a class="nav-link" href="bilan.html">Bilan</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="https://github.com/aorngom" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-primary" href="assets/CV_Aminata.pdf" target="_blank" rel="noopener">CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <main class="container" id="top">
+
+    <!-- HERO -->
+    <section class="project-hero">
+      <div class="breadcrumb reveal">
+        <a href="projets.html">← Retour aux projets</a>
+        <span>•</span>
+        <span>BUT3 • DataViz</span>
+      </div>
+
+      <div class="hero-grid">
+        <!-- LEFT -->
+        <div class="hero-left card reveal">
+          <h1 class="hero-title">
+            Visualisation de données <span class="accent">(Chart.js)</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            L’objectif de ce projet, c’était de rendre la donnée lisible et compréhensible dans une interface web.
+            J’ai travaillé sur la construction d’un rendu clair, avec des graphiques (courbes, barres, etc.),
+            et surtout sur la logique derrière : préparer les données, choisir le bon graphique, et afficher
+            des informations utiles sans surcharger l’écran.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Chart.js</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Interface web</span>
+            <span class="tag">DataViz</span>
+          </div>
+
+          <div class="links">
+            <a class="btn btn-primary" href="#lien-site">Ouvrir le site</a>
+            <a class="btn btn-ghost" href="#detail">Voir le détail</a>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <aside class="hero-right card reveal">
+          <div class="cover" aria-label="Aperçu du projet">
+            <!-- Mets une capture existante de ton dossier assets/img -->
+            <img src="assets/img/pro5.png" alt="Aperçu projet Chart.js" />
+          </div>
+
+          <div class="quick-facts">
+            <div class="fact">
+              <b>Focus</b>
+              <span>rendre la donnée lisible</span>
+            </div>
+            <div class="fact">
+              <b>Type</b>
+              <span>site web + graphiques</span>
+            </div>
+            <div class="fact">
+              <b>Valeur</b>
+              <span>comprendre en 10 secondes</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CONTENU -->
+    <section id="detail" class="section reveal">
+      <div class="card">
+        <h2>Contexte du projet</h2>
+        <p>
+          En data, ce n’est pas suffisant d’avoir des résultats : il faut pouvoir les expliquer.
+          La visualisation sert à ça. Elle permet de repérer des tendances, comparer des valeurs,
+          ou comprendre une évolution dans le temps. Ici, l’idée était de créer une interface web
+          où l’utilisateur peut voir des graphiques et comprendre rapidement l’essentiel.
+        </p>
+
+        <h2 style="margin-top:14px;">Ce que j’ai travaillé</h2>
+        <ul>
+          <li>organiser une page web autour de la donnée (structure, sections, hiérarchie)</li>
+          <li>préparer les données côté JavaScript (formats, tableaux, valeurs à afficher)</li>
+          <li>choisir le type de graphique adapté à la question (comparer, évoluer, répartir)</li>
+          <li>configurer Chart.js (labels, axes, légendes, tooltips, responsive)</li>
+          <li>garder un rendu propre et cohérent (marges, tailles, lisibilité)</li>
+        </ul>
+
+        <div class="grid-2" style="margin-top:14px;">
+          <div class="card">
+            <h2>Ce que ce projet m’a appris</h2>
+            <ul>
+              <li>un graphique doit répondre à une question, pas juste “faire joli”</li>
+              <li>la préparation des données est aussi importante que l’affichage</li>
+              <li>il faut penser à l’utilisateur (lecture rapide, repères, contexte)</li>
+              <li>le front peut être très “data” si on le fait bien</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>Ce que je ferais en plus</h2>
+            <ul>
+              <li>ajouter des filtres (période, catégorie, top N)</li>
+              <li>ajouter un mode comparaison (2 séries côte à côte)</li>
+              <li>ajouter un export (PNG/PDF ou CSV)</li>
+              <li>ajouter une mini-explication automatique sous chaque graphique</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px;">
+          <h2>À quoi sert Chart.js ici</h2>
+          <p>
+            Chart.js permet de transformer des données en graphiques interactifs directement dans le navigateur.
+            Concrètement, on donne des labels et des valeurs, puis on configure l’affichage (type de graphe,
+            axes, style, animations, et réactions au survol). Le gros avantage, c’est qu’on peut garder une page web
+            simple tout en ayant un rendu très clair et dynamique.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIEN SITE -->
+    <section id="lien-site" class="section reveal">
+      <div class="card">
+        <h2>Accès au site</h2>
+        <p>
+          Le projet est accessible en ligne. Tu peux ouvrir le site directement ici.
+        </p>
+
+        <div class="links">
+          <a class="btn btn-primary" href="https://tsinjo-randrianarison-aminata-ngom.alwaysdata.net/" target="_blank" rel="noopener">
+            Ouvrir le site Chart.js
+          </a>
+          <a class="btn btn-ghost" href="projets.html">
+            Retour à la liste des projets
+          </a>
+        </div>
+
+        <p style="margin:10px 0 0; color: rgba(255,255,255,0.62); font-size: 13px;">
+          Si le site est temporairement indisponible (maintenance / hébergeur), le code est aussi disponible sur mon GitHub.
+        </p>
+      </div>
+    </section>
+
+    <!-- OUTILS (animation) -->
+    <section class="section reveal">
+      <div class="tools-block">
+        <div class="tools-title">
+          <b>Outils utilisés</b>
+          <span>front • data • graphiques</span>
+        </div>
+
+        <div class="marquee" aria-label="Outils du projet (défilement)">
+          <div class="track">
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/javascript/ffffff" alt="JavaScript" />
+              <span>JavaScript</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/chartdotjs/ffffff" alt="Chart.js" />
+              <span>Chart.js</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/html5/ffffff" alt="HTML" />
+              <span>HTML</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/css3/ffffff" alt="CSS" />
+              <span>CSS</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" />
+              <span>GitHub</span>
+            </div>
+
+            <!-- répétition -->
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/javascript/ffffff" alt="JavaScript" />
+              <span>JavaScript</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/chartdotjs/ffffff" alt="Chart.js" />
+              <span>Chart.js</span>
+            </div>
+          </div>
+        </div>
+
+        <p style="margin:10px 0 0; color: rgba(255,255,255,0.55); font-size: 12px;">
+        </p>
+      </div>
+    </section>
+
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Aminata NGOM — Portfolio</p>
+      </footer>
+
+  </main>
+</body>
+</html>

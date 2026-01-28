@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projet cybersécurité — Aminata NGOM</title>
+  <meta name="description" content="Projet cybersécurité (attaque/défense) — Portfolio Aminata NGOM." />
+
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/projet.css" />
+  <script src="js/projet.js" defer></script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Aminata</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="projets.html">Projets</a></li>
+        <li><a class="nav-link" href="competences.html">Compétences</a></li>
+        <li><a class="nav-link" href="bilan.html">Bilan</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="https://github.com/aorngom" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-primary" href="assets/CV_Aminata.pdf" target="_blank" rel="noopener">CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <main class="container" id="top">
+
+    <!-- HERO -->
+    <section class="project-hero">
+      <div class="breadcrumb reveal">
+        <a href="projets.html">← Retour aux projets</a>
+        <span>•</span>
+        <span>BUT2 • Cyber</span>
+      </div>
+
+      <div class="hero-grid">
+        <!-- LEFT -->
+        <div class="hero-left card reveal">
+          <h1 class="hero-title">
+            Projet cybersécurité <span class="accent">(attaque / défense)</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Projet en binôme : comprendre une attaque, voir comment elle impacte un système, puis proposer une défense
+            et vérifier si la défense améliore vraiment la situation. L’objectif n’était pas de “faire peur” avec la cyber,
+            mais d’apprendre une méthode : observer, tester, expliquer, corriger.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Analyse</span>
+            <span class="tag">Méthodologie</span>
+            <span class="tag">Binôme</span>
+            <span class="tag">Expérimentation</span>
+          </div>
+
+          <div class="links">
+            <a class="btn btn-primary" href="#telechargement">Télécharger le notebook</a>
+            <a class="btn btn-ghost" href="#detail">Voir le détail</a>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <aside class="hero-right card reveal">
+          <div class="cover" aria-label="Aperçu du projet">
+            <!-- Mets une capture existante de ton dossier assets/img -->
+            <img src="assets/img/pro3.png" alt="Aperçu projet cybersécurité" />
+          </div>
+
+          <div class="quick-facts">
+            <div class="fact">
+              <b>Approche</b>
+              <span>attaque puis défense, avec comparaison</span>
+            </div>
+            <div class="fact">
+              <b>Livrable</b>
+              <span>notebook .ipynb + résultats</span>
+            </div>
+            <div class="fact">
+              <b>Objectif</b>
+              <span>expliquer clairement ce qui se passe</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CONTENU -->
+    <section id="detail" class="section reveal">
+      <div class="card">
+        <h2>Contexte du projet</h2>
+        <p>
+          Le projet tournait autour d’un scénario simple : un système fonctionne “normalement”, puis on introduit une attaque
+          ou une perturbation, et on mesure ce que ça change. Ensuite, on met en place une défense et on refait les mesures.
+          L’idée, c’était d’apprendre à ne pas rester au niveau “théorie”, mais à observer des effets concrets.
+        </p>
+
+        <h2 style="margin-top:14px;">Ce qu’on a dû faire</h2>
+        <ul>
+          <li>décrire le contexte et ce qu’on cherche à protéger (données, service, utilisateur)</li>
+          <li>choisir une attaque ou une technique de perturbation, et l’appliquer</li>
+          <li>mesurer l’impact (ce qui change avant / après)</li>
+          <li>proposer une défense ou une solution de mitigation</li>
+          <li>re-tester et comparer pour voir si la défense est efficace</li>
+          <li>rédiger une explication claire (pas juste des captures ou des chiffres)</li>
+        </ul>
+
+        <div class="grid-2" style="margin-top:14px;">
+          <div class="card">
+            <h2>Ce que ce projet m’a apporté</h2>
+            <ul>
+              <li>raisonner comme une personne qui analyse : cause → effet → preuve</li>
+              <li>comparer des résultats au lieu de juste “exécuter” un code</li>
+              <li>comprendre l’importance des données et des biais dans un test</li>
+              <li>faire le lien avec la data et le ML (qualité des données, robustesse)</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>Pourquoi c’est utile</h2>
+            <ul>
+              <li>en entreprise, on doit souvent expliquer un problème clairement</li>
+              <li>la sécurité, c’est aussi de la prévention et de la méthode</li>
+              <li>savoir tester et valider une solution est une compétence importante</li>
+              <li>ça aide à mieux comprendre les risques sur les données</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px;">
+          <h2>Exemples de preuves dans le projet</h2>
+          <p>
+            Dans le notebook, on retrouve des tests et des résultats (avant/après) qui permettent de justifier ce qu’on dit.
+            Par exemple : des mesures sur la performance, des métriques, des sorties de scripts, et des comparaisons visuelles.
+            L’objectif est que quelqu’un qui lit le notebook comprenne “ce qui change” et “pourquoi”.
+          </p>
+          <p>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TELECHARGEMENT -->
+    <section id="telechargement" class="section reveal">
+      <div class="card">
+        <h2>Téléchargements</h2>
+        <p>
+          Le livrable principal du projet est un notebook Jupyter. Tu peux le rendre téléchargeable ici.
+        </p>
+
+        <div class="links">
+          <a class="btn btn-primary" href="assets/projet_cybersecurite.ipynb" download>
+            Télécharger le notebook (.ipynb)
+          </a>
+          <a class="btn btn-ghost" href="projets.html">
+            Retour à la liste des projets
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTILS (animation) -->
+    <section class="section reveal">
+      <div class="tools-block">
+        <div class="tools-title">
+          <b>Outils utilisés</b>
+          <span>analyse • expérimentation • notebook</span>
+        </div>
+
+        <div class="marquee" aria-label="Outils du projet (défilement)">
+          <div class="track">
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/python/ffffff" alt="Python" />
+              <span>Python</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/jupyter/ffffff" alt="Jupyter" />
+              <span>Jupyter</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/numpy/ffffff" alt="NumPy" />
+              <span>NumPy</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/pandas/ffffff" alt="Pandas" />
+              <span>Pandas</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/scikitlearn/ffffff" alt="Scikit-learn" />
+              <span>Scikit-learn</span>
+            </div>
+
+            <!-- répétition -->
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/python/ffffff" alt="Python" />
+              <span>Python</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/jupyter/ffffff" alt="Jupyter" />
+              <span>Jupyter</span>
+            </div>
+          </div>
+        </div>
+
+        <p style="margin:10px 0 0; color: rgba(255,255,255,0.55); font-size: 12px;">
+        </p>
+      </div>
+    </section>
+
+  
+    <footer class="footer">
+        <p>© <span id="year"></span> Aminata NGOM — Portfolio</p>
+      </footer>
+
+  </main>
+</body>
+</html>

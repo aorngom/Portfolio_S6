@@ -1,0 +1,51 @@
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(10px);
+    background: rgba(6,7,20,0.55);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  
+  .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 14px 0;
+  }
+  
+  .brand{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+  }
+  .brand-dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #8b5cf6, #22d3ee);
+  }
+  .nav-links{
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-link{
+    color: rgba(255,255,255,0.7);
+    padding: 8px 10px;
+    border-radius: 10px;
+  }
+  .nav-link:hover{
+    background: rgba(255,255,255,0.08);
+    color: white;
+  }
+  
+  .nav-actions{
+    display: flex;
+    gap: 10px;
+  }
+  

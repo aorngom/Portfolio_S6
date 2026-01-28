@@ -1,0 +1,474 @@
+/* projets.css */
+:root{
+  --text: rgba(255,255,255,0.88);
+  --muted: rgba(255,255,255,0.65);
+  --accent: #8b5cf6;
+  --accent-2: #22d3ee;
+  --radius: 18px;
+  --shadow: 0 18px 60px rgba(0,0,0,0.45);
+}
+
+*{ box-sizing: border-box; }
+html, body{ height: 100%; }
+html{ scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:
+    radial-gradient(1200px 600px at 15% 10%, rgba(139,92,246,0.35), transparent 55%),
+    radial-gradient(1200px 600px at 95% 10%, rgba(34,211,238,0.25), transparent 55%),
+    linear-gradient(180deg, #060714 0%, #050615 40%, #050615 100%);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+a{ color: inherit; text-decoration: none; }
+
+.container{
+  width: min(1250px, calc(100% - 80px));
+  margin: 0 auto;
+}
+@media (max-width: 700px){
+  .container{ width: min(1100px, calc(100% - 32px)); }
+}
+
+.bg-glow{
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(900px 500px at 10% 20%, rgba(139,92,246,0.18), transparent 60%),
+    radial-gradient(900px 500px at 95% 25%, rgba(34,211,238,0.14), transparent 60%);
+  z-index: -1;
+}
+
+/* Buttons (compat avec navbar.css) */
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.10);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease, border 0.2s ease;
+}
+.btn:active{ transform: translateY(1px); }
+.btn-primary{
+  background: linear-gradient(90deg, rgba(139,92,246,0.95), rgba(34,211,238,0.75));
+  border-color: rgba(255,255,255,0.14);
+  color: #0b0c16;
+}
+.btn-primary:hover{ filter: brightness(1.05); }
+.btn-ghost{ background: rgba(255,255,255,0.06); }
+.btn-ghost:hover{
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(255,255,255,0.16);
+}
+
+/* Cards */
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04));
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Accent text */
+.accent{
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Sections */
+.section{ padding: 70px 0; }
+#projets-academiques, #projets-entrepreneuriaux{ scroll-margin-top: 90px; }
+
+.section-head{ text-align: left; margin-bottom: 18px; }
+.section-title{ margin: 0; font-size: 28px; }
+.section-desc{
+  margin: 8px 0 0;
+  max-width: 70ch;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Reveal (si tu utilises index.js) */
+.reveal{
+  opacity: 1;                 /* ✅ important : pas invisible si JS absent */
+  transform: none;
+}
+.reveal.is-visible{
+  opacity: 1;
+  transform: none;
+}
+/* Si tu as un JS reveal, tu peux remettre l'anim :
+.reveal{ opacity:0; transform:translateY(14px); transition:opacity 700ms ease, transform 700ms ease; }
+.reveal.is-visible{ opacity:1; transform:translateY(0); }
+*/
+
+/* =========================
+   HERO PROJETS
+   ========================= */
+.projects-hero{
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 26px;
+  align-items: center;
+  min-height: calc(100vh - 70px);
+  padding: 110px 0 70px;
+}
+
+.pill{
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.hero-title{
+  margin: 14px 0 10px;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 2.05;
+}
+
+.hero-subtitle{
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.55;
+  max-width: 58ch;
+}
+
+.chips{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 0;
+}
+.chip{
+  font-size: 12px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.78);
+}
+
+.projects-cta{
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* =========================
+   OUTILS EN CERCLE
+   ========================= */
+.projects-hero-right{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.tools-wheel{
+  position: relative;
+  width: min(420px, 100%);
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.tools-wheel::before{
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(139,92,246,0.35), transparent 55%),
+    radial-gradient(circle at 70% 70%, rgba(34,211,238,0.25), transparent 55%);
+  filter: blur(20px);
+  opacity: 0.9;
+}
+
+.tools-wheel-center{
+  position: relative;
+  z-index: 2;
+  width: 110px;
+  height: 110px;
+  border-radius: 28px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+}
+.tools-wheel-center span{
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  color: rgba(255,255,255,0.9);
+}
+
+/* anneau qui tourne */
+.tools-wheel-ring{
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 3;
+  animation: wheelSpin 18s linear infinite;
+}
+
+/* bulles */
+.tool-bubble{
+  position: absolute;
+  width: 86px;
+  height: 86px;
+  border-radius: 22px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  transition: transform .2s ease, background .2s ease, border .2s ease;
+}
+
+.tool-bubble img{
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.35));
+}
+
+/* positions (5 bulles) */
+.tool-1{ --x: 0px;    --y: -145px; }
+.tool-2{ --x: 138px;  --y: -45px; }
+.tool-3{ --x: 86px;   --y: 125px; }
+.tool-4{ --x: -86px;  --y: 125px; }
+.tool-5{ --x: -138px; --y: -45px; }
+
+.tools-wheel-ring .tool-bubble{
+  transform: translate(var(--x), var(--y));
+  animation: bubbleUnspinPos 18s linear infinite;
+}
+
+.tool-bubble:hover{
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(255,255,255,0.18);
+  transform: translate(var(--x), var(--y)) scale(1.06);
+}
+
+/* animations */
+@keyframes wheelSpin{
+  from{ transform: rotate(0deg); }
+  to{ transform: rotate(360deg); }
+}
+@keyframes bubbleUnspinPos{
+  from{ transform: translate(var(--x), var(--y)) rotate(0deg); }
+  to{ transform: translate(var(--x), var(--y)) rotate(-360deg); }
+}
+
+/* =========================
+   GRID PROJETS
+   ========================= */
+.projects-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.project{ padding: 16px; }
+
+.project-thumb{
+  height: 150px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+  display: grid;
+  place-items: center;
+  margin-bottom: 14px;
+  overflow: hidden; /* IMPORTANT pour couper l’image */
+}
+.thumb-text{
+  color: rgba(255,255,255,0.50);
+  font-weight: 800;
+}
+.project-thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* remplit la case sans déformer */
+  border-radius: 14px;    /* cohérent avec la card */
+  display: block;
+}
+.project-title{
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.project-desc{
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.project-meta{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.tag{
+  font-size: 12px;
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.75);
+}
+
+.project-actions{
+  display: flex;
+  justify-content: flex-end;
+}
+.link{
+  font-size: 13px;
+  color: rgba(255,255,255,0.78);
+  padding: 9px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+}
+.link:hover{ background: rgba(255,255,255,0.07); }
+
+/* Footer */
+.footer{
+  padding: 34px 0 44px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 30px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 980px){
+  .projects-hero{
+    grid-template-columns: 1fr;
+    padding: 100px 0 60px;
+  }
+  .projects-hero-right{
+    justify-content: center;
+    margin-top: 18px;
+  }
+  .tools-wheel{
+    width: min(420px, 92vw);
+  }
+  .projects-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  background: linear-gradient(
+    180deg,
+    rgba(5,6,21,0.85),
+    rgba(5,6,21,0.55)
+  );
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+/* Logo */
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.brand-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+
+.brand-text{
+  color: white;
+}
+
+/* Links */
+.nav-links{
+  display: flex;
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link{
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.75);
+  position: relative;
+  transition: 0.2s ease;
+}
+
+.nav-link:hover{
+  color: white;
+}
+
+/* underline animation */
+.nav-link::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transition: 0.25s ease;
+}
+.nav-link:hover::after{
+  width: 100%;
+}
+
+/* Actions (boutons) */
+.nav-actions{
+  display: flex;
+  gap: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .nav-links{
+    display: none; /* plus tard tu pourras faire un menu burger */
+  }
+}

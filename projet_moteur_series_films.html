@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moteur de recherche séries/films — Aminata NGOM</title>
+  <meta name="description" content="Projet BUT3 : moteur de recherche et recommandation (FastAPI + data) — Portfolio Aminata NGOM." />
+
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/projet.css" />
+  <script src="js/projet.js" defer></script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Aminata</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="projets.html">Projets</a></li>
+        <li><a class="nav-link" href="competences.html">Compétences</a></li>
+        <li><a class="nav-link" href="bilan.html">Bilan</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="https://github.com/aorngom" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-primary" href="assets/CV_Aminata.pdf" target="_blank" rel="noopener">CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <main class="container" id="top">
+
+    <!-- HERO -->
+    <section class="project-hero">
+      <div class="breadcrumb reveal">
+        <a href="projets.html">← Retour aux projets</a>
+        <span>•</span>
+        <span>BUT3 • Projet majeur</span>
+      </div>
+
+      <div class="hero-grid">
+        <!-- LEFT -->
+        <div class="hero-left card reveal">
+          <h1 class="hero-title">
+            Moteur de recherche <span class="accent">séries/films</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Ce projet combine data et web. L’objectif était de construire une application complète où l’utilisateur peut
+            rechercher des séries, explorer des détails, et obtenir des suggestions. On a travaillé la préparation des données,
+            la logique de recherche, une API, et une interface claire pour que tout soit utilisable.
+          </p>
+
+          <div class="tags">
+            <span class="tag">FastAPI</span>
+            <span class="tag">Python</span>
+            <span class="tag">Recherche</span>
+            <span class="tag">Recommandation</span>
+          </div>
+
+          <div class="links">
+            <a class="btn btn-primary" href="#acces">Accéder au projet</a>
+            <a class="btn btn-ghost" href="#detail">Voir le détail</a>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <aside class="hero-right card reveal">
+          <div class="cover" aria-label="Aperçu du projet">
+            <img src="assets/img/pro6.png" alt="Aperçu interface moteur" />
+          </div>
+
+          <div class="quick-facts">
+            <div class="fact">
+              <b>But</b>
+              <span>rechercher et recommander des contenus à partir des données</span>
+            </div>
+            <div class="fact">
+              <b>Approche</b>
+              <span>préparation des données + API + interface utilisateur</span>
+            </div>
+            <div class="fact">
+              <b>Résultat</b>
+              <span>application complète orientée utilisateur</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CONTENU -->
+    <section id="detail" class="section reveal">
+      <div class="card">
+        <h2>Contexte et objectif</h2>
+        <p>
+          L’idée du projet était de faire une application qui ne se limite pas à afficher un catalogue. On devait produire
+          une recherche utile, qui donne des résultats pertinents, et qui reste simple à utiliser. Le projet demandait aussi
+          une organisation propre, car il y avait plusieurs parties : données, backend, et interface.
+        </p>
+
+        <div class="grid-2" style="margin-top:14px;">
+          <div class="card">
+            <h2>Ce que l’utilisateur peut faire</h2>
+            <ul>
+              <li>rechercher une série ou un film avec une barre de recherche</li>
+              <li>voir des suggestions pendant la saisie pour aller plus vite</li>
+              <li>accéder à une page détaillée avec les infos principales</li>
+              <li>gérer un compte et un profil utilisateur</li>
+              <li>enregistrer des favoris et retrouver ses choix</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>Ce qu’on a construit côté technique</h2>
+            <ul>
+              <li>préparation et nettoyage des données pour éviter les incohérences</li>
+              <li>mise en place d’une logique de recherche basée sur le contenu</li>
+              <li>API pour relier l’interface aux données</li>
+              <li>pages web pour rendre le résultat clair et utilisable</li>
+              <li>organisation du code et travail en équipe</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px;">
+          <h2>Recherche et pertinence</h2>
+          <p>
+            La recherche ne se contente pas de vérifier si un mot est présent. L’objectif est de rapprocher les mots saisis
+            de ce que la série “représente” (titre, résumé, mots-clés, genres). Cela permet de remonter des résultats plus cohérents,
+            même quand la requête contient plusieurs mots ou n’est pas exactement identique au texte stocké.
+          </p>
+        </div>
+
+        <div class="card" style="margin-top:14px;">
+          <h2>Recommandation</h2>
+          <p>
+            Le projet intègre une logique de recommandation pour aider l’utilisateur à découvrir du contenu. Selon les séries consultées,
+            les favoris et les éléments disponibles dans les données, l’application propose des contenus proches, ou des catégories utiles
+            comme les mieux notées, les plus populaires, ou celles qui ont reçu des récompenses.
+          </p>
+          <p>
+            Le but était surtout de montrer une approche orientée utilisateur : on cherche, on explore, puis on découvre de nouvelles séries.
+          </p>
+        </div>
+
+        <div class="card" style="margin-top:14px;">
+          <h2>Aperçu de l’interface</h2>
+          <p>
+            Voici un exemple d’écran où on voit la recherche et l’exploration du contenu. Pour rester cohérente avec le portfolio,
+            je garde uniquement deux captures.
+          </p>
+
+          <div class="grid-2" style="margin-top:12px;">
+            <div class="cover">
+              <img src="assets/img/moteur1.png" alt="Interface moteur (1)" />
+            </div>
+            <div class="cover">
+              <img src="assets/img/moteur2.png" alt="Interface moteur (2)" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCES -->
+    <section id="acces" class="section reveal">
+      <div class="card">
+        <h2>Accès au projet</h2>
+        <p>
+          Le projet se lance en local avec des lignes de commande car il combine backend et frontend. Pour garder le portfolio simple,
+          j’ai mis le projet sur GitHub avec le code, l’organisation du projet et la documentation.
+        </p>
+
+        <div class="links">
+          <a class="btn btn-primary" href="https://github.com/aorngom" target="_blank" rel="noopener">
+            Voir le projet sur GitHub
+          </a>
+          <a class="btn btn-ghost" href="projets.html">
+            Retour aux projets
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTILS (animation) -->
+    <section class="section reveal">
+      <div class="tools-block">
+        <div class="tools-title">
+          <b>Outils utilisés</b>
+          <span>data • backend • web</span>
+        </div>
+
+        <div class="marquee" aria-label="Outils du projet (défilement)">
+          <div class="track">
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/python/ffffff" alt="Python" />
+              <span>Python</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/fastapi/ffffff" alt="FastAPI" />
+              <span>FastAPI</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/postgresql/ffffff" alt="PostgreSQL" />
+              <span>PostgreSQL</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/html5/ffffff" alt="HTML" />
+              <span>HTML</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/css3/ffffff" alt="CSS" />
+              <span>CSS</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/javascript/ffffff" alt="JavaScript" />
+              <span>JavaScript</span>
+            </div>
+
+            <!-- répétition -->
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/python/ffffff" alt="Python" />
+              <span>Python</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/fastapi/ffffff" alt="FastAPI" />
+              <span>FastAPI</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/postgresql/ffffff" alt="PostgreSQL" />
+              <span>PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+        <p style="margin:10px 0 0; color: rgba(255,255,255,0.55); font-size: 12px;"></p>
+      </div>
+    </section>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Aminata NGOM — Portfolio</p>
+      </footer>
+
+  </main>
+</body>
+</html>

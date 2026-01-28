@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Entrepôt de données + ETL (Talend) — Aminata NGOM</title>
+  <meta name="description" content="Projet BUT3 : comprendre et construire un entrepôt de données (DWH) + alimentation ETL avec Talend." />
+
+  <!-- Ta navbar existante -->
+  <link rel="stylesheet" href="css/navbar.css" />
+
+  <!-- CSS unique pour toutes les pages projets -->
+  <link rel="stylesheet" href="css/projet.css" />
+
+  <!-- JS commun (optionnel) -->
+  <script src="js/projet.js" defer></script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Aminata</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="projets.html">Projets</a></li>
+        <li><a class="nav-link" href="competences.html">Compétences</a></li>
+        <li><a class="nav-link" href="bilan.html">Bilan</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="https://github.com/aorngom" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-primary" href="assets/CV_Aminata.pdf" target="_blank" rel="noopener">CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <main class="container" id="top">
+
+    <!-- HERO -->
+    <section class="project-hero">
+      <div class="breadcrumb reveal">
+        <a href="projets.html">← Retour aux projets</a>
+        <span>•</span>
+        <span>BUT3 • Data</span>
+      </div>
+
+      <div class="hero-grid">
+        <!-- LEFT -->
+        <div class="hero-left card reveal">
+          <h1 class="hero-title">
+            Entrepôt de données + ETL <span class="accent">(Talend)</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Ce projet m’a appris à construire une base faite pour l’analyse (un entrepôt de données),
+            puis à l’alimenter proprement depuis des bases “de production”.
+            L’objectif n’était pas juste de “remplir des tables”, mais de comprendre une logique complète :
+            extraire des données, les transformer (nettoyage, regroupements, correspondances),
+            puis les charger dans un modèle cohérent et stable.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Data Engineering</span>
+            <span class="tag">ETL</span>
+            <span class="tag">Talend</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Modélisation</span>
+            <span class="tag">Contrôles</span>
+          </div>
+
+          <div class="links">
+            <a class="btn btn-primary" href="#telechargements">Voir les compte-rendus</a>
+            <a class="btn btn-ghost" href="#detail">Comprendre le projet</a>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <aside class="hero-right card reveal">
+          <div class="cover" aria-label="Aperçu du projet">
+            <img src="assets/img/pro4.png" alt="Aperçu projet Entrepôt de données (Talend)" />
+          </div>
+
+          <div class="quick-facts">
+            <div class="fact">
+              <b>Contexte</b>
+              <span>TP/SAE Data : construction + alimentation d’un DWH en conditions réalistes</span>
+            </div>
+            <div class="fact">
+              <b>Ce qu’on a entraîné</b>
+              <span>ETL, modélisation analytique, cohérence, dépendances, erreurs & diagnostic</span>
+            </div>
+            <div class="fact">
+              <b>Résultat</b>
+              <span>Une base prête pour la BI : requêtes rapides, indicateurs et analyses fiables</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CONTENU -->
+    <section id="detail" class="section reveal">
+      <div class="card">
+        <h2>À quoi sert un entrepôt de données (DWH) ?</h2>
+        <p>
+          Un entrepôt de données sert à analyser. Contrairement à une base de production (qui sert à faire tourner un site,
+          une app, des commandes…), un DWH est organisé pour répondre facilement à des questions du type :
+          “Combien a-t-on vendu ?”, “Où ?”, “Quand ?”, “Quel produit marche le mieux ?”, etc.
+          En résumé : le DWH permet d’avoir des données structurées, propres et cohérente> pour faire du reporting
+          et de la prise de décision.
+        </p>
+
+        <h2 style="margin-top:14px;">Le but du TP : ce que le prof voulait nous apprendre</h2>
+        <p>
+          L’objectif pédagogique était de nous faire pratiquer une vraie démarche Data :
+          récupérer des données depuis plusieurs sources, gérer des différences de formats,
+          comprendre l’intérêt d’un modèle “analytique”, puis industrialiser l’alimentation via un outil ETL.
+          On a aussi appris à raisonner en termes de fiabilité : si les données sont fausses ou incohérentes,
+          les analyses derrière le seront aussi.
+        </p>
+
+        <div class="grid-2" style="margin-top:14px;">
+          <div class="card">
+            <h2>Ce qu’on a fait (en restant général)</h2>
+            <ul>
+              <li>
+                <b>Extraction</b> : lire des données depuis des bases sources (plusieurs environnements / schémas).
+              </li>
+              <li>
+                <b>Transformation</b> : harmoniser les champs, faire des correspondances, préparer des données stables,
+                corriger ce qui peut casser les chargements.
+              </li>
+              <li>
+                <b>Chargement</b> : alimenter l’entrepôt en respectant les dépendances (ordre logique, intégrité, cohérence).
+              </li>
+              <li>
+                <b>Orchestration</b> : enchaîner les tâches proprement (job global) pour que tout se lance sans refaire à la main.
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>Ce que ça m’a appris concrètement</h2>
+            <ul>
+              <li>
+                <b>Rigueur</b> : un ETL se pense comme une chaîne, si un maillon casse, tout le reste peut tomber.
+              </li>
+              <li>
+                <b>Diagnostic</b> : comprendre une erreur (contraintes, formats, jointures) et trouver la cause réelle.
+              </li>
+              <li>
+                <b>Qualité des données</b> : vérifier, contrôler, comparer avant/après, pour éviter les “faux résultats”.
+              </li>
+              <li>
+                <b>Vision “BI / décisionnel”</b> : organiser les données pour répondre vite à des besoins d’analyse.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px;">
+          <h2>Pourquoi c’est important en entreprise</h2>
+          <p>
+            Dans beaucoup d’entreprises, les données sont dispersées (outils, bases différentes, exports…).
+            Un DWH + un ETL permettent de centraliser, sécuriser et standardiser les données,
+            puis de produire des indicateurs fiables. C’est exactement ce qu’on entraînait ici : passer
+            d’un monde “données brutes” à un monde “données analysables”.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TELECHARGEMENTS -->
+    <section id="telechargements" class="section reveal">
+      <div class="card">
+        <h2>Compte-rendus détaillés (tables, mappings, jobs…)</h2>
+        <p>
+          Ici je présente le projet de manière générale pour que ce soit compréhensible.
+          Si tu veux les détails complets (schémas, étapes exactes, tables, captures Talend/SQL Developer),
+          chaque compte-rendu est téléchargeable ci-dessous.
+        </p>
+
+        <div class="links">
+          <a class="btn btn-primary" href="assets/Compte_rendu_TP1_entrepot_donnees.pdf" download>
+            Télécharger TP1 (PDF)
+          </a>
+          <a class="btn btn-primary" href="assets/Compte_rendu_TP2_entrepot_donnees.pdf" download>
+            Télécharger TP2 (PDF)
+          </a>
+          <a class="btn btn-primary" href="assets/Compte_rendu_TP3_entrepot_donnees.pdf" download>
+            Télécharger TP3 (PDF)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTILS (animation) -->
+    <section class="section reveal">
+      <div class="tools-block">
+        <div class="tools-title">
+          <b>Outils utilisés</b>
+          <span>Talend • SQL • Debug</span>
+        </div>
+
+        <div class="marquee" aria-label="Outils du projet (défilement)">
+          <div class="track">
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/talend/ffffff" alt="Talend" />
+              <span>Talend</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/oracle/ffffff" alt="Oracle" />
+              <span>SQL / Oracle</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/databricks/ffffff" alt="SQL Developer (outil SQL)" />
+              <span>SQL Developer</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/java/ffffff" alt="Java" />
+              <span>Java (runtime)</span>
+            </div>
+
+            <!-- répétition légère -->
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/talend/ffffff" alt="Talend" />
+              <span>Talend</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/oracle/ffffff" alt="Oracle" />
+              <span>SQL / Oracle</span>
+            </div>
+          </div>
+        </div>
+
+        <p style="margin:10px 0 0; color: rgba(255,255,255,0.55); font-size: 12px;">
+        </p>
+      </div>
+    </section>
+
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Aminata NGOM — Portfolio</p>
+      </footer>
+  </main>
+</body>
+</html>

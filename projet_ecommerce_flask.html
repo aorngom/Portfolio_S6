@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Site e-commerce (Flask) — Aminata NGOM</title>
+  <meta name="description" content="Projet BUT1 : site e-commerce avec Flask — Portfolio Aminata NGOM." />
+
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/projet.css" />
+  <script src="js/projet.js" defer></script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Aminata</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="projets.html">Projets</a></li>
+        <li><a class="nav-link" href="competences.html">Compétences</a></li>
+        <li><a class="nav-link" href="bilan.html">Bilan</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="https://github.com/aorngom" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-primary" href="assets/CV_Aminata.pdf" target="_blank" rel="noopener">CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <main class="container" id="top">
+
+    <!-- HERO -->
+    <section class="project-hero">
+      <div class="breadcrumb reveal">
+        <a href="projets.html">← Retour aux projets</a>
+        <span>•</span>
+        <span>BUT1 • Web</span>
+      </div>
+
+      <div class="hero-grid">
+        <!-- LEFT -->
+        <div class="hero-left card reveal">
+          <h1 class="hero-title">
+            Site e-commerce <span class="accent">(Flask)</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Ce projet fait partie de mes premiers projets web “complets”. L’idée était de comprendre comment fonctionne
+            un site e-commerce côté back-end et côté interface : navigation, produits, panier, commandes, et gestion
+            des données. C’est un projet qui m’a vraiment aidée à comprendre la logique route / template / base de données.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+            <span class="tag">Templates</span>
+            <span class="tag">Base de données</span>
+          </div>
+
+          <div class="links">
+            <a class="btn btn-primary" href="#acces">Accéder au projet</a>
+            <a class="btn btn-ghost" href="#detail">Voir le détail</a>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <aside class="hero-right card reveal">
+          <div class="cover" aria-label="Aperçu du projet">
+            <!-- Remplace le numéro si besoin -->
+            <img src="assets/img/pro2.png" alt="Aperçu projet e-commerce Flask" />
+          </div>
+
+          <div class="quick-facts">
+            <div class="fact">
+              <b>But</b>
+              <span>comprendre le fonctionnement d’un site e-commerce complet</span>
+            </div>
+            <div class="fact">
+              <b>Points clés</b>
+              <span>routes Flask, pages dynamiques, données produits, panier</span>
+            </div>
+            <div class="fact">
+              <b>Résultat</b>
+              <span>un site navigable avec plusieurs pages et une logique de boutique</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CONTENU -->
+    <section id="detail" class="section reveal">
+      <div class="card">
+        <h2>Contexte du projet</h2>
+        <p>
+          En BUT1, on commence à passer de l’algorithmique “pure” à des applications web où il faut relier plusieurs choses :
+          des pages, des routes, des données, et une logique utilisateur. L’objectif du projet était de construire une petite
+          boutique en ligne, avec un vrai parcours : consulter des produits, accéder à une fiche, ajouter au panier, puis
+          valider une commande.
+        </p>
+
+        <div class="grid-2" style="margin-top:14px;">
+          <div class="card">
+            <h2>Ce que le site permet de faire</h2>
+            <ul>
+              <li>afficher un catalogue de produits sous forme de pages dynamiques</li>
+              <li>consulter une fiche produit avec ses informations</li>
+              <li>ajouter et retirer des produits dans un panier</li>
+              <li>gérer une logique de commande (quantités, total, validation)</li>
+              <li>séparer les pages utilisateurs et les pages de gestion si besoin</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>Ce que j’ai compris grâce à ce projet</h2>
+            <ul>
+              <li>comment une route Flask renvoie une page HTML construite avec des données</li>
+              <li>comment un template affiche un contenu différent selon le produit sélectionné</li>
+              <li>comment organiser un projet avec des dossiers (templates, static, contrôleurs)</li>
+              <li>comment relier des actions utilisateur à des opérations côté serveur</li>
+              <li>comment rendre un site simple mais cohérent et utilisable</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px;">
+          <h2>Organisation technique</h2>
+          <p>
+            Le projet est organisé autour de routes Flask qui gèrent les pages principales. Les données des produits sont
+            récupérées depuis la base, puis envoyées aux templates pour afficher correctement le catalogue et les fiches.
+            Le dossier static permet de gérer les ressources (images, CSS, scripts) et les templates contiennent la structure
+            des pages.
+          </p>
+          <p>
+            Ce projet m’a appris à faire une séparation propre entre la logique (Python) et l’affichage (HTML), tout en gardant
+            une navigation simple pour l’utilisateur.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCES -->
+    <section id="acces" class="section reveal">
+      <div class="card">
+        <h2>Accès au projet</h2>
+        <p>
+          Le projet se lance en local avec quelques lignes de commande, car il s’appuie sur un serveur Flask.
+          Pour éviter d’afficher des commandes ici, j’ai mis le projet sur GitHub avec le code et l’organisation complète.
+        </p>
+
+        <div class="links">
+          <a class="btn btn-primary" href="https://github.com/aorngom" target="_blank" rel="noopener">
+            Voir le projet sur GitHub
+          </a>
+          <a class="btn btn-ghost" href="projets.html">
+            Retour aux projets
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTILS (animation) -->
+    <section class="section reveal">
+      <div class="tools-block">
+        <div class="tools-title">
+          <b>Outils utilisés</b>
+          <span>backend • web • organisation</span>
+        </div>
+
+        <div class="marquee" aria-label="Outils du projet (défilement)">
+          <div class="track">
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/python/ffffff" alt="Python" />
+              <span>Python</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/flask/ffffff" alt="Flask" />
+              <span>Flask</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/html5/ffffff" alt="HTML" />
+              <span>HTML</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/css3/ffffff" alt="CSS" />
+              <span>CSS</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/javascript/ffffff" alt="JavaScript" />
+              <span>JavaScript</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/sqlite/ffffff" alt="Base de données" />
+              <span>Base de données</span>
+            </div>
+
+            <!-- répétition pour l’animation -->
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/python/ffffff" alt="Python" />
+              <span>Python</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/flask/ffffff" alt="Flask" />
+              <span>Flask</span>
+            </div>
+            <div class="tool-pill">
+              <img src="https://cdn.simpleicons.org/html5/ffffff" alt="HTML" />
+              <span>HTML</span>
+            </div>
+          </div>
+        </div>
+
+        <p style="margin:10px 0 0; color: rgba(255,255,255,0.55); font-size: 12px;"></p>
+      </div>
+    </section>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Aminata NGOM — Portfolio</p>
+      </footer>
+
+  </main>
+</body>
+</html>

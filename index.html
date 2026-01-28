@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Aminata NGOM</title>
+  <meta name="description" content="Portfolio BUT Informatique — AGED : projets, expérience, outils." />
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <script src="js/index.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container">
+          <a class="brand" href="index.html">
+            <span class="brand-dot"></span>
+            <span class="brand-text">Aminata</span>
+          </a>
+      
+          <ul class="nav-links">
+            <li><a class="nav-link" href="about.html">About</a></li>
+            <li><a class="nav-link" href="projets.html">Projets</a></li>
+            <li><a class="nav-link" href="competences.html">Compétences</a></li>
+            <li><a class="nav-link" href="bilan.html">Bilan</a></li>
+          </ul>
+      
+          <div class="nav-actions">
+            <a class="btn btn-ghost" href="https://github.com/aorngom" target="_blank">GitHub</a>
+            <a class="btn btn-primary" href="assets/CV_Aminata.pdf" target="_blank">CV</a>
+          </div>
+        </nav>
+      </header>
+      
+  
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero container">
+      <div class="hero-left reveal">
+        <span class="pill">Disponible pour alternance / stage Data</span>
+
+        <h1 class="hero-title">
+          Du code, de la donnée, des projets... <span class="accent">Découvrez mon univers à travers mon portfolio!</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Bienvenue sur mon portfolio. Vous y découvrirez mon parcours en BUT Informatique, ainsi que les projets que j’ai réalisés au fil de mes trois années d’études. 
+          À travers ces projets, j’ai appris à concevoir des applications, manipuler et exploiter des données, et transformer des idées en solutions concrètes.
+           Ce portfolio a pour objectif de présenter à la fois mes compétences techniques, ma manière de travailler et mon évolution au cours de ma formation.
+        </p>
+          
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#portfolio">Voir Portfolio</a>
+          <a class="btn btn-ghost" href="#about">À propos de moi</a>
+        </div>
+
+        <div class="socials" aria-label="Réseaux">
+          <a class="icon-btn" href="#" aria-label="LinkedIn"><span>in</span></a>
+          <a class="icon-btn" href="#" aria-label="GitHub"><span>&lt;/&gt;</span></a>
+          <a class="icon-btn" href="mailto:tonmail@example.com" aria-label="Email"><span>@</span></a>
+        </div>
+      </div>
+      <div class="hero-right reveal">
+        <div class="hero-visual">
+          <video class="hero-video" autoplay loop muted playsinline>
+            <source src="assets/GIF_accueil.mp4" type="video/mp4">
+            Ton navigateur ne supporte pas la vidéo.
+          </video>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <div class="section-head reveal">
+        <h2 class="section-title">À propos de moi</h2>
+        <p class="section-desc">Quelques lignes simples: qui je suis, ce que je cherche, ce que j’aime faire.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text card reveal">
+          <h3>Bonjour, je suis <span class="accent">Aminata NGOM</span></h3>
+          <p>
+            Étudiante en BUT Informatique (parcours AGED), je travaille sur des projets liés aux bases de données,
+            à l’analyse de données et développement d'application et de sites web.
+          </p>
+          <p>
+            Objectif : trouver une expérience (stage / alternance) orientée Data (BI, Data Engineering, Data Analyst).
+          </p>
+
+          <div class="about-actions">
+            <a class="btn btn-primary" href="assets/CV_Aminata.pdf" target="_blank" rel="noreferrer">Télécharger CV</a>
+            <a class="btn btn-ghost" href="#portfolio">Mon Portfolio</a>
+          </div>
+        </div>
+
+        <!-- Photo flottante (pas collée) -->
+        <div class="about-photo reveal">
+          <img src="assets/img/profil.jpg" alt="Photo Aminata" />
+        </div>
+      </div>
+    </section>
+    <section class="stats container reveal">
+        <div class="stats-grid">
+      
+          <div class="stat card">
+            <div class="stat-icon">⌘</div>
+            <div class="stat-number">+11</div>
+            <div class="stat-title">Projets</div>
+            <div class="stat-desc">Projets académiques réalisés</div>
+          </div>
+      
+          <div class="stat card">
+            <div class="stat-icon">👤</div>
+            <div class="stat-number">3</div>
+            <div class="stat-title">Années d’étude</div>
+            <div class="stat-desc">Formation en informatique</div>
+          </div>
+      
+          <div class="stat card">
+            <div class="stat-icon">🌍</div>
+            <div class="stat-number">1</div>
+            <div class="stat-title">Stage</div>
+            <div class="stat-desc">Expérience à l’étranger</div>
+          </div>
+      
+        </div>
+      </section>
+      
+    <!-- PORTFOLIO (onglets) -->
+    <section id="portfolio" class="section container">
+      <div class="section-head reveal">
+        <h2 class="section-title">Portfolio</h2>
+        <p class="section-desc">
+          Clique sur un onglet : Projets / Expérience / Outils. Le contenu change en dessous. Ensuite clique sur “Details →” pour ouvrir la page du projet.
+        </p>
+      </div>
+
+      <div class="tabs reveal" role="tablist" aria-label="Portfolio onglets">
+        <button class="tab is-active" type="button" data-tab="projects">Projets</button>
+        <button class="tab" type="button" data-tab="experience">Expérience</button>
+        <button class="tab" type="button" data-tab="tools">Outils technologiques</button>
+      </div>
+
+      <!-- PANELS -->
+      <div class="tab-panels">
+
+        <!-- PROJETS -->
+<div class="tab-panel is-active" id="tab-projects" data-panel="projects">
+  <div class="projects-grid">
+
+    <article class="project card reveal">
+      <div class="project-thumb">
+        <img src="assets/img/pro1.png" alt="Illustration stage" class="project-img">
+      </div>            
+      <h3 class="project-title">Festival de Canes — site web</h3>
+      <p class="project-desc">
+        Site web complet en équipe (frameworks, back-end, données + rendu propre).
+      </p>
+      <div class="project-meta">
+        <span class="tag">Vue.js</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">PL/SQL</span>
+        <span class="tag">Agile</span>
+      </div>
+      <div class="project-actions">
+        <a class="link" href="projet_festival_cannes.html" rel="noreferrer">Details →</a>
+      </div>
+    </article>
+
+    <article class="project card reveal">
+      <div class="project-thumb">
+        <img src="assets/img/pro2.png" alt="Illustration stage" class="project-img">
+      </div>
+        <h3 class="project-title">Site e-commerce (Flask)</h3>
+      <p class="project-desc">
+        Boutique + commandes : mon premier framework, gros gain en Python et logique back-end.
+      </p>
+      <div class="project-meta">
+        <span class="tag">Python</span>
+        <span class="tag">Flask</span>
+        <span class="tag">Web</span>
+      </div>
+      <div class="project-actions">
+        <a class="link" href="projet_ecommerce_flask.html" rel="noreferrer">Details →</a>
+      </div>
+    </article>
+
+    <article class="project card reveal">
+      <div class="project-thumb">
+        <img src="assets/img/pro3.png" alt="Illustration stage" class="project-img">
+      </div>
+            <h3 class="project-title">Projet cybersécurité</h3>
+      <p class="project-desc">
+        Attaque/défense : projet qui m’a fait aimer les sujets data/ML (et très bonne note).
+      </p>
+      <div class="project-meta">
+        <span class="tag">Cyber</span>
+        <span class="tag">Analyse</span>
+        <span class="tag">Binôme</span>
+      </div>
+      <div class="project-actions">
+        <a class="link" href="projet_cybersecurite.html" rel="noreferrer">Details →</a>
+      </div>
+    </article>
+
+    <article class="project card reveal">
+      <div class="project-thumb">
+        <img src="assets/img/pro4.png" alt="Illustration stage" class="project-img">
+      </div>
+            <h3 class="project-title">Entrepôt de données (Talend)</h3>
+      <p class="project-desc">
+        DWH + ETL : dimensions/faits, chargements, orchestration, contrôles.
+      </p>
+      <div class="project-meta">
+        <span class="tag">Talend</span>
+        <span class="tag">SQL</span>
+        <span class="tag">ETL</span>
+      </div>
+      <div class="project-actions">
+        <a class="link" href="projet_dwh_talend.html" rel="noreferrer">Details →</a>
+      </div>
+    </article>
+
+    <article class="project card reveal">
+      <div class="project-thumb">
+        <img src="assets/img/pro5.png" alt="Illustration stage" class="project-img">
+      </div>
+            <h3 class="project-title">Visualisation de données (Chart.js)</h3>
+      <p class="project-desc">
+        Graphiques clairs à partir des données (lisibilité + esthétique du rendu).
+      </p>
+      <div class="project-meta">
+        <span class="tag">Chart.js</span>
+        <span class="tag">JS</span>
+        <span class="tag">CSS</span>
+      </div>
+      <div class="project-actions">
+        <a class="link" href="projet_dataviz_chartjs.html" rel="noreferrer">Details →</a>
+      </div>
+    </article>
+
+    <article class="project card reveal">
+      <div class="project-thumb">
+        <img src="assets/img/pro6.png" alt="Illustration stage" class="project-img">
+      </div>
+            <h3 class="project-title">Moteur de recherche séries/films</h3>
+      <p class="project-desc">
+        Data + API : nettoyage, normalisation, TF-IDF, FastAPI, projet fini en avance grâce à l’agile.
+      </p>
+      <div class="project-meta">
+        <span class="tag">FastAPI</span>
+        <span class="tag">Python</span>
+        <span class="tag">TF-IDF</span>
+        <span class="tag">Agile</span>
+      </div>
+      <div class="project-actions">
+        <a class="link" href="projet_moteur_series_films.html" rel="noreferrer">Details →</a>
+      </div>
+    </article>
+
+    <article class="project card reveal">
+      <div class="project-thumb">
+        <img src="assets/img/pro7.png" alt="Illustration stage" class="project-img">
+      </div>
+            <h3 class="project-title">CV vidéo</h3>
+      <p class="project-desc">
+        Structure, transitions, parler de moi : un projet qui m’a fait progresser en storytelling.
+      </p>
+      <div class="project-meta">
+        <span class="tag">Montage</span>
+        <span class="tag">Storytelling</span>
+        <span class="tag">Créativité</span>
+      </div>
+      <div class="project-actions">
+        <a class="link" href="projet_cv_video.html" rel="noreferrer">Details →</a>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+
+        <!-- EXPERIENCE -->
+        <div class="tab-panel" id="tab-experience" data-panel="experience">
+          <div class="projects-grid">
+            <article class="project card reveal">
+              <div class="project-thumb">
+                <img src="assets/img/stage.png" alt="Illustration stage" class="project-img">
+              </div>
+                <h3 class="project-title">Stage à l’étranger — Sénégal</h3>
+              <p class="project-desc">
+                Expérience en entreprise à l’international : missions, outils utilisés, livrables et retours.
+              </p>
+              <div class="project-meta">
+                <span class="tag">Entreprise</span>
+                <span class="tag">International</span>
+                <span class="tag">Data / Dev</span>
+              </div>
+              <div class="project-actions">
+                <a class="link" href="https://aorngom-atos.github.io/PORTFOLIO/" target="_blank" rel="noreferrer">
+                  Details →
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- OUTILS -->
+        <div class="tab-panel" id="tab-tools" data-panel="tools">
+          <div class="tools-grid">
+
+            <!-- Tu peux remplacer les icônes par tes fichiers (assets/icons/...) si tu veux -->
+            <div class="tool card reveal">
+                <img class="tool-ico" src="https://cdn.simpleicons.org/java" alt="Java">
+                <div class="tool-name">Java</div>
+              </div>
+              <div class="tool card reveal">
+                <img class="tool-ico" src="https://cdn.simpleicons.org/c" alt="C">
+                <div class="tool-name">Langage C</div>
+              </div>
+              <div class="tool card reveal">
+                <img class="tool-ico" src="https://cdn.simpleicons.org/cplusplus" alt="C++">
+                <div class="tool-name">C++</div>
+              </div>
+              <div class="tool card reveal">
+                <img class="tool-ico" src="https://cdn.simpleicons.org/python" alt="Python">
+                <div class="tool-name">Python</div>
+              </div>
+              
+              <div class="tool card reveal">
+                <img class="tool-ico" src="https://cdn.simpleicons.org/html5" alt="HTML">
+                <div class="tool-name">HTML</div>
+              </div>
+              <div class="tool card reveal">
+                <img class="tool-ico" src="https://cdn.simpleicons.org/css3" alt="CSS">
+                <div class="tool-name">CSS</div>
+              </div>
+              <div class="tool card reveal">
+                <img class="tool-ico" src="https://cdn.simpleicons.org/javascript" alt="JavaScript">
+                <div class="tool-name">JavaScript</div>
+              </div>
+              
+              <div class="tool card reveal">
+                <img class="tool-ico" src="https://cdn.simpleicons.org/react" alt="React">
+                <div class="tool-name">React</div>
+              </div>
+              <div class="tool card reveal">
+                <img class="tool-ico" src="https://cdn.simpleicons.org/vue.js" alt="Vue.js">
+                <div class="tool-name">Vue.js</div>
+              </div>
+              <div class="tool card reveal">
+                <img class="tool-ico" src="https://cdn.simpleicons.org/node.js" alt="Node.js">
+                <div class="tool-name">Node.js</div>
+              </div>
+              
+              <div class="tool card reveal">
+                <img class="tool-ico" src="https://cdn.simpleicons.org/microsoftexcel" alt="Excel">
+                <div class="tool-name">Excel</div>
+              </div>
+              <div class="tool card reveal">
+                <img class="tool-ico" src="https://cdn.simpleicons.org/microsoftword" alt="Word">
+                <div class="tool-name">Word</div>
+              </div>
+              <div class="tool card reveal">
+                <img class="tool-ico" src="https://cdn.simpleicons.org/canva" alt="Canva">
+                <div class="tool-name">Canva</div>
+              </div>
+              <div class="tool card reveal">
+                <img class="tool-ico" src="https://cdn.simpleicons.org/googlecolab" alt="Google Colab">
+                <div class="tool-name">Google Colab</div>
+              </div>
+              <div class="tool card reveal">
+                <img class="tool-ico" src="https://cdn.simpleicons.org/github" alt="GitHub">
+                <div class="tool-name">GitHub</div>
+              </div>
+              <div class="tool card reveal">
+                <img class="tool-ico" src="https://cdn.simpleicons.org/gitlab" alt="GitLab">
+                <div class="tool-name">GitLab</div>
+              </div>
+              
+              <div class="tool card reveal">
+                <img class="tool-ico" src="https://cdn.simpleicons.org/bootstrap" alt="Bootstrap">
+                <div class="tool-name">Bootstrap</div>
+              </div>
+              <div class="tool card reveal">
+                <img class="tool-ico" src="https://cdn.simpleicons.org/postgresql" alt="Neon (Postgres)">
+                <div class="tool-name">Neon (Postgres)</div>
+              </div>
+              <div class="tool card reveal">
+                <img class="tool-ico" src="https://cdn.simpleicons.org/mysql" alt="SQL">
+                <div class="tool-name">SQL</div>
+              </div>
+              
+              <div class="tool card reveal">
+                <img class="tool-ico" src="https://cdn.simpleicons.org/flask" alt="Flask">
+                <div class="tool-name">Flask</div>
+              </div>
+              
+          </div>
+        </div>
+
+      </div>
+    </section>
+     
+        <!-- CONTACT -->
+        <section id="contact" class="section container">
+            <div class="section-head reveal">
+            <h2 class="section-title">Mon profil vous intéresse? N'hésitez surtout pas à me contacter !</h2>
+            <p class="section-desc">Mes coordonnées:</p>
+            </div>
+        
+            <div class="contact-grid">
+            <!-- Infos -->
+            <div class="contact-info card reveal">
+                <h3>Get in Touch</h3>
+        
+                <p class="contact-line">📧 <a href="mailto:aminataorngo@gmail.com">aminataorngom34@gmail.com</a></p>
+                <p class="contact-line">🔗 LinkedIn : <a href="https://www.linkedin.com/in/aminata-ngom" target="_blank">aminata ngom</a></p>
+                <p class="contact-line">💻 GitHub : <a href="https://github.com/aorngom" target="_blank">aorngom</a></p>
+            </div>
+        
+            <!-- Animation droite -->
+            <div class="contact-anim reveal">
+                <video class="contact-illustration" autoplay loop muted playsinline>
+                  <source src="assets/GIF_footer.mp4" type="video/mp4">
+                </video>
+              </div>
+              
+              
+        </section>
+        
+  
+    <footer class="footer container">
+      <p>© <span id="year"></span> Aminata NGOM — Portfolio</p>
+    </footer>
+
+  </main>
+</body>
+</html>
