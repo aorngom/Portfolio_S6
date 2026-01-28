@@ -181,12 +181,10 @@
     border: 1px solid rgba(255,255,255,0.10);
     color: rgba(255,255,255,0.75);
   }
-  
   /* =========================================
-     ✅ PHOTO STACK (sans inclinaison + overlap léger sur les BORDS)
-     Objectif: voir clairement les 3 (le prof voit tout)
-     ========================================= */
-  .stack{
+   PHOTO STACK — plus lisible (on voit vraiment les 3)
+   ========================================= */
+.stack{
     position: relative;
     width: min(560px, 100%);
     height: 360px;
@@ -194,65 +192,77 @@
     isolation: isolate;
   }
   
+  /* option si tu veux plus haut */
   .stack-lg{ height: 400px; }
   
   .stack .p{
     position: absolute;
-    width: 72%;
+  
+    /* taille un peu plus petite => on voit l’arrière */
+    width: 78%;
     height: 78%;
+  
     object-fit: cover;
     border-radius: 18px;
-    border: 1px solid rgba(255,255,255,0.14);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.40);
+  
+    /* séparation propre entre photos */
+    outline: 2px solid rgba(5,6,21,0.55);
+    outline-offset: -2px;
+  
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow:
+      0 25px 60px rgba(0,0,0,0.40),
+      0 0 0 1px rgba(255,255,255,0.06) inset;
+  
     background: rgba(255,255,255,0.04);
-    transition: transform .22s ease, filter .22s ease;
+  
+    transition: transform .25s ease, filter .25s ease;
+    will-change: transform;
   }
   
-  /* ✅ plus d’inclinaison */
-  .stack .p1,
-  .stack .p2,
-  .stack .p3{ transform: none; }
-  
-  /* ✅ overlap léger: on décale peu -> les 3 sont visibles (pas recouvert à moitié) */
+  /* positions (plus de décalage = plus visible) */
   .stack .p1{
-    left: 0%;
-    top: 46px;
     z-index: 1;
-    opacity: 0.96;
+    left: 0px;
+    top: 70px;
+    opacity: 0.92;
   }
   
   .stack .p2{
-    left: 10%;
-    top: 24px;
     z-index: 2;
-    opacity: 0.98;
+    left: 38px;
+    top: 36px;
+    opacity: 0.96;
   }
   
   .stack .p3{
-    left: 20%;
-    top: 2px;
     z-index: 3;
+    left: 76px;
+    top: 6px;
     opacity: 1;
   }
   
-  /* ✅ petite séparation visuelle entre les photos (liseré + glow léger) */
-  .stack .p{
-    outline: 2px solid rgba(5,6,21,0.55);         /* bord sombre = séparation */
-    outline-offset: -2px;
-  }
-  .stack .p::after{
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 18px;
-    box-shadow: 0 0 0 1px rgba(255,255,255,0.08) inset;
-    pointer-events: none;
+  /* petit glow sur la photo du dessus */
+  .stack .p3{
+    box-shadow:
+      0 30px 80px rgba(0,0,0,0.50),
+      0 0 0 1px rgba(255,255,255,0.08) inset,
+      0 0 40px rgba(34,211,238,0.10);
   }
   
-  /* Hover: écarte un peu, mais toujours propre */
-  .stack:hover .p1{ transform: translate(-4px, 6px); }
-  .stack:hover .p2{ transform: translate(0px, 0px); }
-  .stack:hover .p3{ transform: translate(4px, -6px); }
+  /* hover : écarte + met en valeur sans tout casser */
+  .stack:hover .p1{ transform: translate(-8px, 10px) rotate(-1deg); filter: saturate(1.02); }
+  .stack:hover .p2{ transform: translate(0px, 0px) rotate(0deg); }
+  .stack:hover .p3{ transform: translate(10px, -10px) rotate(1deg); filter: saturate(1.05); }
+  
+  /* mobile : moins de largeur, donc on réduit les décalages */
+  @media (max-width: 700px){
+    .stack{ height: 300px; }
+    .stack .p{ width: 86%; height: 76%; }
+    .stack .p1{ left: 0px; top: 64px; }
+    .stack .p2{ left: 22px; top: 32px; }
+    .stack .p3{ left: 44px; top: 6px; }
+  }
   
   /* Reveal (safe default: visible même si JS pas chargé) */
   .reveal{ opacity: 1; transform: none; }

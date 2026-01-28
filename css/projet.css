@@ -212,62 +212,90 @@
     gap: 10px;
     margin-top: 12px;
   }
-  
-  /* Tools animation (marquee) */
-  .tools-block{
-    margin-top: 14px;
-    padding: 14px;
-    border-radius: 16px;
-    border: 1px solid rgba(255,255,255,0.10);
-    background: rgba(255,255,255,0.04);
-    overflow: hidden;
-  }
-  .tools-title{
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  .tools-title b{ font-size: 14px; }
-  .tools-title span{ color: var(--muted); font-size: 12px; }
-  
-  .marquee{
-    position: relative;
-    overflow: hidden;
-    mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
-  }
-  .track{
-    display: flex;
-    gap: 12px;
-    width: max-content;
-    animation: scrollX 18s linear infinite;
-  }
-  @keyframes scrollX{
-    from{ transform: translateX(0); }
-    to{ transform: translateX(-50%); }
-  }
-  
-  .tool-pill{
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 12px;
-    border-radius: 999px;
-    border: 1px solid rgba(255,255,255,0.10);
-    background: rgba(255,255,255,0.05);
-    white-space: nowrap;
-  }
-  .tool-pill img{
-    width: 18px;
-    height: 18px;
-    object-fit: contain;
-    display: block;
-  }
-  .tool-pill span{
-    font-size: 13px;
-    color: rgba(255,255,255,0.82);
-  }
+  /* =========================
+   TOOLS (animation douce, pas de scroll)
+   Remplace l'ancien bloc marquee + track + keyframes scrollX
+   ========================= */
+
+.tools-block{
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+  overflow: hidden;
+}
+
+.tools-title{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tools-title b{ font-size: 14px; }
+.tools-title span{ color: var(--muted); font-size: 12px; }
+
+/* On garde marquee comme "wrapper" mais sans défilement */
+.marquee{
+  position: relative;
+  overflow: hidden;
+}
+
+/* La ligne d'outils ne bouge plus en X.
+   Elle fait juste une respiration + micro flottement */
+.track{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;               /* ✅ s’adapte si ça déborde */
+  justify-content: flex-start;
+  align-items: center;
+  animation: toolsFloat 6s ease-in-out infinite;
+}
+
+/* Option : si tu veux que ça s'arrête quand on survole */
+.tools-block:hover .track{
+  animation-play-state: paused;
+}
+
+@keyframes toolsFloat{
+  0%   { transform: translateY(0) scale(1); opacity: 0.95; }
+  50%  { transform: translateY(-4px) scale(1.01); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 0.95; }
+}
+
+/* Pills */
+.tool-pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.05);
+  white-space: nowrap;
+  transition: transform .2s ease, background .2s ease, border .2s ease;
+}
+
+.tool-pill:hover{
+  transform: translateY(-2px) scale(1.03);
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.18);
+}
+
+.tool-pill img{
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  display: block;
+}
+
+.tool-pill span{
+  font-size: 13px;
+  color: rgba(255,255,255,0.82);
+}
+
   
   /* Footer */
   .footer{
